@@ -1,0 +1,6 @@
+<h1> <%= @post.title %> </h1>
+<p>Content: <%= @post.content %></p>
+<p><%= link_to "Post's destination info", destination_path(@post.destination) %></p>
+<p><%= link_to "Post's blogger info", blogger_path(@post.blogger) %></p>
+<p><%= @post.likes %> <%= (@post.likes) == 1 ? 'like' : 'likes'%></p>
+<p><%= button_to 'Like', post_likes_path(@post), method: :post %></p>
